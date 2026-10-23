@@ -24,6 +24,7 @@ jobs:
         run: |
           mkdir -p site
           cp index.html site/index.html
+          cp -a images site/images
       - name: Subir artefacto
         uses: actions/upload-pages-artifact@v3
         with:
