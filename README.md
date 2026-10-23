@@ -1,42 +1,25 @@
-# Comunidad de monjes
+# Monjes de Ciudad
 
-Sitio estático de la renovación. La página inicial ya está publicada en el repositorio; el contenido llegará con las instrucciones.
+Sitio estático. Se abre directo en el navegador, sin Node ni compilación.
 
-## Requisitos
+## Abrir en local
 
-- Node.js 22
-- npm
-
-## Instalación
+Abre `index.html` en el navegador, o sirve la carpeta así:
 
 ```bash
-npm install
+python3 -m http.server 43123
 ```
 
-## Desarrollo
+La página queda en [http://127.0.0.1:43123](http://127.0.0.1:43123).
 
-```bash
-npm run dev
-```
+## GitHub Pages
 
-Vite queda a la escucha en todas las interfaces, en el puerto 43123: [http://127.0.0.1:43123](http://127.0.0.1:43123).
-
-## Compilación
-
-```bash
-npm run build
-```
-
-La salida queda en la carpeta `dist`.
-
-## Publicación en GitHub Pages
-
-Cuando exista el remoto, el sitio se publicará con GitHub Actions. El flujo está en `.github/workflows/pages.yml`:
+Cuando exista el remoto, GitHub Actions publicará el `index.html` de la raíz. El flujo está en `.github/workflows/pages.yml`:
 
 - se dispara con un push a la rama `main` y también de forma manual (`workflow_dispatch`);
-- usa Node.js 22, instala con `npm ci` y compila con `npm run build`;
-- sube la carpeta `dist` con `actions/upload-pages-artifact` y la despliega con `actions/deploy-pages`.
+- no hay build de Node ni `npm`;
+- el artefacto es un directorio `site/` que contiene solo ese `index.html`, subido con `actions/upload-pages-artifact` y desplegado con `actions/deploy-pages`.
 
-En el repositorio remoto hay que elegir **GitHub Actions** como origen de Pages (Settings → Pages). La opción `base: './'` de Vite permite servir el sitio aunque el repositorio no sea `usuario.github.io`.
+En el repositorio remoto hay que elegir **GitHub Actions** como origen de Pages (Settings → Pages).
 
 El push al remoto todavía no está hecho.
