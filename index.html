@@ -21,7 +21,7 @@
     };
   </script>
 </head>
-<body class="bg-stone-50 font-sans text-stone-800 antialiased">
+<body class="bg-stone-50 pb-24 font-sans text-stone-800 antialiased">
   <header class="absolute inset-x-0 top-0 z-10 px-8 py-8 md:px-16">
     <nav class="flex flex-wrap items-center justify-between gap-6">
       <a href="#inicio" class="font-serif text-xl tracking-wide">Monjes de Ciudad</a>
@@ -47,11 +47,125 @@
       </div>
     </section>
 
-    <section id="comunidad" class="px-8 pb-24">
-      <div class="mx-auto max-w-2xl">
-        <h3 class="font-serif text-3xl">Comunidad</h3>
+    <section id="comunidad" class="px-8 py-24">
+      <div class="mx-auto max-w-5xl">
+        <h3 class="font-serif text-3xl md:text-4xl">Nuestra Comunidad</h3>
+        <p class="mt-8 max-w-2xl text-lg leading-relaxed">Nos reunimos en el silencio y en la acción. Aquí encontrarás a otras personas buscando el equilibrio en medio del ruido.</p>
+        <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <article class="rounded-2xl border border-stone-200 bg-white/70 px-6 py-10 text-center text-stone-500">Testimonio</article>
+          <article class="rounded-2xl border border-stone-200 bg-white/70 px-6 py-10 text-center text-stone-500">Testimonio</article>
+          <article class="rounded-2xl border border-stone-200 bg-white/70 px-6 py-10 text-center text-stone-500">Testimonio</article>
+        </div>
+      </div>
+    </section>
+
+    <section id="practica" class="px-8 py-28 md:py-36">
+      <div class="mx-auto max-w-2xl text-center">
+        <h3 class="font-serif text-3xl md:text-4xl">Espacio de Práctica Silenciosa</h3>
+        <p id="contador" class="mt-12 font-serif text-6xl tracking-wide text-stone-900 md:text-8xl" aria-live="polite">10:00</p>
+        <div class="mt-12 flex flex-wrap items-center justify-center gap-4">
+          <button id="iniciar" type="button" class="rounded-md bg-stone-800 px-8 py-3 text-white transition-colors duration-300 hover:bg-stone-700">Iniciar</button>
+          <button id="detener" type="button" class="rounded-md border border-stone-300 px-8 py-3 transition-colors duration-300 hover:bg-stone-200">Detener</button>
+        </div>
       </div>
     </section>
   </main>
+
+  <footer class="px-8 pb-16 text-center text-sm tracking-wide text-stone-500">
+    © 2026 Monjes de Ciudad. Respira profundo.
+  </footer>
+
+  <div class="fixed bottom-0 w-full bg-stone-900 text-stone-100">
+    <div class="mx-auto flex items-center justify-between gap-6 px-8 py-4">
+      <p class="text-sm tracking-wide">Meditación Base - 5 min</p>
+      <button id="alternar-barra" type="button" class="rounded-md border border-stone-600 px-4 py-2 text-sm tracking-wide transition-colors duration-300 hover:bg-stone-800">Play</button>
+    </div>
+    <div class="h-px w-full bg-stone-700" aria-hidden="true">
+      <div id="progreso" class="h-full bg-stone-100" style="width: 0%"></div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var restante = 600;
+      var temporizador = null;
+      var contador = document.getElementById("contador");
+      var iniciar = document.getElementById("iniciar");
+      var detener = document.getElementById("detener");
+
+      function formato(segundos) {
+        var minutos = Math.floor(segundos / 60);
+        var resto = segundos % 60;
+        return String(minutos).padStart(2, "0") + ":" + String(resto).padStart(2, "0");
+      }
+
+      function tic() {
+        restante -= 1;
+        if (restante <= 0) {
+          restante = 0;
+          contador.textContent = "00:00";
+          clearInterval(temporizador);
+          temporizador = null;
+          return;
+        }
+        contador.textContent = formato(restante);
+      }
+
+      iniciar.addEventListener("click", function () {
+        if (temporizador !== null || restante <= 0) return;
+        temporizador = setInterval(tic, 1000);
+      });
+
+      detener.addEventListener("click", function () {
+        if (temporizador === null) return;
+        clearInterval(temporizador);
+        temporizador = null;
+      });
+
+      var duracionMs = 5 * 60 * 1000;
+      var acumulado = 0;
+      var inicioTramo = null;
+      var barra = null;
+      var progreso = document.getElementById("progreso");
+      var alternar = document.getElementById("alternar-barra");
+
+      function ancho() {
+        var enCurso = inicioTramo === null ? 0 : Date.now() - inicioTramo;
+        var total = Math.min(duracionMs, acumulado + enCurso);
+        progreso.style.width = (total / duracionMs) * 100 + "%";
+        return total;
+      }
+
+      function pausarBarra() {
+        if (inicioTramo !== null) {
+          acumulado += Date.now() - inicioTramo;
+          inicioTramo = null;
+        }
+        if (barra !== null) {
+          clearInterval(barra);
+          barra = null;
+        }
+        if (acumulado > duracionMs) acumulado = duracionMs;
+        progreso.style.width = (acumulado / duracionMs) * 100 + "%";
+        alternar.textContent = "Play";
+      }
+
+      alternar.addEventListener("click", function () {
+        if (barra !== null) {
+          pausarBarra();
+          return;
+        }
+        if (acumulado >= duracionMs) {
+          acumulado = 0;
+          progreso.style.width = "0%";
+        }
+        inicioTramo = Date.now();
+        alternar.textContent = "Pause";
+        barra = setInterval(function () {
+          if (ancho() >= duracionMs) pausarBarra();
+        }, 100);
+      });
+    })();
+  </script>
 </body>
 </html>
