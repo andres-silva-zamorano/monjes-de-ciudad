@@ -27,8 +27,9 @@
       <a href="#inicio" class="font-serif text-xl tracking-wide">Monjes de Ciudad</a>
       <div class="flex flex-wrap gap-8 text-sm tracking-wide">
         <a class="transition-colors duration-300 hover:text-stone-300" href="#inicio">Inicio</a>
+        <a class="transition-colors duration-300 hover:text-stone-300" href="#curso">Curso</a>
         <a class="transition-colors duration-300 hover:text-stone-300" href="#manifiesto">Manifiesto</a>
-        <a class="transition-colors duration-300 hover:text-stone-300" href="#comunidad">Comunidad</a>
+        <a class="transition-colors duration-300 hover:text-stone-300" href="#redes">Redes</a>
       </div>
     </nav>
   </header>
@@ -37,49 +38,68 @@
     <section id="inicio" class="relative flex min-h-screen flex-col items-center justify-center bg-cover bg-center px-8 text-center" style="background-image: url('images/hero-meditador.jpg')">
       <div class="absolute inset-0 bg-black/60" aria-hidden="true"></div>
       <div class="relative z-10 flex flex-col items-center">
-        <h1 class="max-w-3xl font-serif text-4xl leading-tight text-white md:text-6xl">Paz interior en el ritmo de la ciudad</h1>
-        <h2 class="mt-8 max-w-xl text-lg font-normal leading-relaxed text-stone-100 md:text-xl">Un refugio digital para la atención plena en el mundo moderno.</h2>
-        <a href="#manifiesto" class="mt-12 inline-block rounded-md bg-stone-800 px-8 py-3 text-white transition-colors duration-300 hover:bg-stone-700">Comenzar Práctica</a>
+        <h1 class="max-w-3xl font-serif text-4xl leading-tight text-white md:text-6xl">Bienvenido Monje/Monja de Ciudad</h1>
+        <h2 class="mt-8 max-w-xl text-lg font-normal leading-relaxed text-stone-100 md:text-xl">Este es tu espacio de conexión con tu refugio interior.</h2>
+        <a href="#curso" class="mt-12 inline-block rounded-md bg-stone-800 px-8 py-3 text-white transition-colors duration-300 hover:bg-stone-700">Comenzar Práctica</a>
+      </div>
+    </section>
+
+    <section id="curso" class="px-8 py-24 md:py-32">
+      <div class="mx-auto max-w-2xl">
+        <h3 class="font-serif text-3xl md:text-4xl">Curso Introductorio a la Meditación</h3>
+        <ul class="mt-8 space-y-3 text-lg leading-relaxed">
+          <li>Sábado 17/10 11:00 a 13:00 (Chile)</li>
+          <li>Sabado 24/10 11:00 a 12:00 (Chile)</li>
+          <li>Sábado 31/10 11:00 a 12:00 (Chile)</li>
+          <li>Sábado 07/11 11:00 a 12:00 (Chile)</li>
+        </ul>
+        <p class="mt-8 text-lg leading-relaxed">Entrada liberada por Google Meet</p>
+        <a class="mt-4 inline-block text-lg underline decoration-stone-300 underline-offset-4 transition-colors duration-300 hover:text-stone-500" href="https://meet.google.com/mps-rmwn-vky">Link Google Meet</a>
+        <div class="mt-16 text-center">
+          <p id="contador" class="font-serif text-6xl tracking-wide text-stone-900 md:text-8xl" aria-live="polite">10:00</p>
+          <div class="mt-12 flex flex-wrap items-center justify-center gap-4">
+            <button id="iniciar" type="button" class="rounded-md bg-stone-800 px-8 py-3 text-white transition-colors duration-300 hover:bg-stone-700">Iniciar</button>
+            <button id="pausar" type="button" class="rounded-md border border-stone-300 px-8 py-3 transition-colors duration-300 hover:bg-stone-200">Pausar</button>
+            <button id="reiniciar" type="button" class="rounded-md border border-stone-300 px-8 py-3 transition-colors duration-300 hover:bg-stone-200">Reiniciar</button>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="manifiesto" class="px-8 py-24">
       <div class="mx-auto max-w-2xl">
-        <h3 class="font-serif text-3xl md:text-4xl">Nuestro Manifiesto</h3>
-        <p class="mt-8 text-lg leading-relaxed">En medio del ruido constante y la urgencia de la ciudad, elegimos la pausa. Ser un Monje de Ciudad no requiere aislarse en una montaña, sino encontrar el centro de gravedad dentro del movimiento urbano. Construimos este espacio para aprender, respirar y conectar genuinamente, sin notificaciones que exijan nuestra atención.</p>
+        <h3 class="font-serif text-3xl leading-tight md:text-4xl">Domina el caos. Encuentra tu centro en medio de la ciudad.</h3>
+        <p class="mt-8 text-lg leading-relaxed">Monjes de Ciudad es la comunidad para quienes buscan claridad mental, enfoque inquebrantable y productividad con propósito. Construimos nuestro mundo interno para que vida funcione a nuestro favor, no en nuestra contra.</p>
+        <p class="mt-6 text-lg leading-relaxed">Vivimos rodeados de ruido. Notificaciones, alertas del mercado, sobrecarga de información y una demanda constante de nuestra atención. En la ciudad moderna —física y digital— es fácil perderse en la urgencia y olvidar lo importante. La mayoría reacciona al entorno; unos pocos eligen diseñarlo.</p>
+        <p class="mt-6 text-lg leading-relaxed">Ser un "Monje de Ciudad" no significa aislarse en una montaña ni renunciar a la tecnología. Significa adoptar la disciplina y la calma en medio del movimiento.<br />Es tener una mente como el agua: preparada para todo, sin aferrarse a nada. Creemos en construir un mundo interior que termine liberando nuestra mente, para usarla en lo que realmente importa: crear, analizar y vivir con intención y conciencia.</p>
       </div>
     </section>
 
-    <section id="comunidad" class="px-8 py-24">
-      <div class="mx-auto max-w-5xl">
-        <h3 class="font-serif text-3xl md:text-4xl">Nuestra Comunidad</h3>
-        <p class="mt-8 max-w-2xl text-lg leading-relaxed">Nos reunimos en el silencio y en la acción. Aquí encontrarás a otras personas buscando el equilibrio en medio del ruido.</p>
-        <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
-          <article class="rounded-2xl border border-white/70 bg-white/40 p-8 text-center shadow-sm backdrop-blur-md">
-            <img class="mx-auto h-16 w-16 rounded-full object-cover" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80" alt="" width="64" height="64" />
-            <p class="mt-6 leading-relaxed text-stone-700">Entre un correo y el siguiente apareció un minuto de silencio.</p>
-          </article>
-          <article class="rounded-2xl border border-white/70 bg-white/40 p-8 text-center shadow-sm backdrop-blur-md">
-            <img class="mx-auto h-16 w-16 rounded-full object-cover" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80" alt="" width="64" height="64" />
-            <p class="mt-6 leading-relaxed text-stone-700">La ciudad sigue ahí. Ya no le contesto a cada ruido.</p>
-          </article>
-          <article class="rounded-2xl border border-white/70 bg-white/40 p-8 text-center shadow-sm backdrop-blur-md">
-            <img class="mx-auto h-16 w-16 rounded-full object-cover" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&amp;fit=crop&amp;w=400&amp;h=400&amp;q=80" alt="" width="64" height="64" />
-            <p class="mt-6 leading-relaxed text-stone-700">Respirar antes de cruzar la calle cambió el resto del día.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="practica" class="px-8 py-28 md:py-36">
-      <div class="mx-auto max-w-2xl text-center">
-        <h3 class="font-serif text-3xl md:text-4xl">Espacio de Práctica Silenciosa</h3>
-        <p id="contador" class="mt-12 font-serif text-6xl tracking-wide text-stone-900 md:text-8xl" aria-live="polite">10:00</p>
-        <div class="mt-12 flex flex-wrap items-center justify-center gap-4">
-          <button id="iniciar" type="button" class="rounded-md bg-stone-800 px-8 py-3 text-white transition-colors duration-300 hover:bg-stone-700">Iniciar</button>
-          <button id="pausar" type="button" class="rounded-md border border-stone-300 px-8 py-3 transition-colors duration-300 hover:bg-stone-200">Pausar</button>
-          <button id="reiniciar" type="button" class="rounded-md border border-stone-300 px-8 py-3 transition-colors duration-300 hover:bg-stone-200">Reiniciar</button>
-        </div>
+    <section id="redes" class="px-8 py-24">
+      <div class="mx-auto max-w-2xl">
+        <h3 class="font-serif text-3xl md:text-4xl">Redes</h3>
+        <ul class="mt-10 divide-y divide-stone-200 border-y border-stone-200">
+          <li class="py-5">
+            <a class="font-serif text-xl transition-colors duration-300 hover:text-stone-500" href="https://chat.whatsapp.com/GzVXfvLBN7k2c4vjC2kEZH">Comunidad de Whatsapp</a>
+            <p class="mt-1 break-all text-sm text-stone-500">https://chat.whatsapp.com/GzVXfvLBN7k2c4vjC2kEZH</p>
+          </li>
+          <li class="py-5">
+            <a class="font-serif text-xl transition-colors duration-300 hover:text-stone-500" href="https://tiktok.com/@monje_de_ciudad">Perfil de Tiktok</a>
+            <p class="mt-1 break-all text-sm text-stone-500">https://tiktok.com/@monje_de_ciudad</p>
+          </li>
+          <li class="py-5">
+            <a class="font-serif text-xl transition-colors duration-300 hover:text-stone-500" href="https://www.instagram.com/andres_monje_de_ciudad">Perfil de Instagram</a>
+            <p class="mt-1 break-all text-sm text-stone-500">https://www.instagram.com/andres_monje_de_ciudad</p>
+          </li>
+          <li class="py-5">
+            <a class="font-serif text-xl transition-colors duration-300 hover:text-stone-500" href="https://substack.com/@andresmonjedeciudad">Blog en Substack</a>
+            <p class="mt-1 break-all text-sm text-stone-500">https://substack.com/@andresmonjedeciudad</p>
+          </li>
+          <li class="py-5">
+            <a class="font-serif text-xl transition-colors duration-300 hover:text-stone-500" href="https://www.youtube.com/@MonjesdeCiudad">Canal de Youtube</a>
+            <p class="mt-1 break-all text-sm text-stone-500">https://www.youtube.com/@MonjesdeCiudad</p>
+          </li>
+        </ul>
       </div>
     </section>
   </main>
