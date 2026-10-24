@@ -25,6 +25,10 @@ jobs:
           mkdir -p site
           cp index.html site/index.html
           cp -a images site/images
+          cp -a practica site/practica
+          cp -a biblioteca site/biblioteca
+          cp -a bitacora site/bitacora
+          cp -a recursos site/recursos
       - name: Subir artefacto
         uses: actions/upload-pages-artifact@v3
         with:

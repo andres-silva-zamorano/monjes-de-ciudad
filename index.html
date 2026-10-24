@@ -20,14 +20,34 @@
       },
     };
   </script>
+  <style>
+    summary { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+  </style>
 </head>
 <body class="bg-stone-50 pb-32 font-sans text-stone-800 antialiased">
   <header class="absolute inset-x-0 top-0 z-20 px-8 py-8 text-stone-50 md:px-16">
-    <nav class="flex flex-wrap items-center justify-between gap-6">
-      <a href="#inicio" class="font-serif text-xl tracking-wide">Monjes de Ciudad</a>
-      <div class="flex flex-wrap gap-8 text-sm tracking-wide">
-        <a class="transition-colors duration-300 hover:text-stone-300" href="#inicio">Inicio</a>
-        <a class="transition-colors duration-300 hover:text-stone-300" href="#practica">Práctica</a>
+    <nav class="flex items-start justify-between gap-6 md:items-center">
+      <a href="index.html" class="font-serif text-xl tracking-wide">Monjes de Ciudad</a>
+      <details class="md:hidden">
+        <summary class="cursor-pointer list-none text-sm tracking-wide">Menú</summary>
+        <div class="mt-4 flex flex-col gap-3 text-sm tracking-wide">
+          <a class="transition-colors duration-300 hover:text-stone-300" href="index.html">Inicio</a>
+          <a class="transition-colors duration-300 hover:text-stone-300" href="practica/">Práctica</a>
+          <a class="transition-colors duration-300 hover:text-stone-300" href="biblioteca/">Biblioteca</a>
+          <a class="transition-colors duration-300 hover:text-stone-300" href="bitacora/">Bitácora</a>
+          <a class="transition-colors duration-300 hover:text-stone-300" href="recursos/">Recursos</a>
+          <a class="transition-colors duration-300 hover:text-stone-300" href="#curso">Curso</a>
+          <a class="transition-colors duration-300 hover:text-stone-300" href="#manifiesto">Manifiesto</a>
+          <a class="transition-colors duration-300 hover:text-stone-300" href="#redes">Redes</a>
+        </div>
+      </details>
+      <div class="hidden flex-nowrap items-center gap-x-5 text-sm tracking-wide md:flex">
+        <a class="transition-colors duration-300 hover:text-stone-300" href="index.html">Inicio</a>
+        <a class="transition-colors duration-300 hover:text-stone-300" href="practica/">Práctica</a>
+        <a class="transition-colors duration-300 hover:text-stone-300" href="biblioteca/">Biblioteca</a>
+        <a class="transition-colors duration-300 hover:text-stone-300" href="bitacora/">Bitácora</a>
+        <a class="transition-colors duration-300 hover:text-stone-300" href="recursos/">Recursos</a>
         <a class="transition-colors duration-300 hover:text-stone-300" href="#curso">Curso</a>
         <a class="transition-colors duration-300 hover:text-stone-300" href="#manifiesto">Manifiesto</a>
         <a class="transition-colors duration-300 hover:text-stone-300" href="#redes">Redes</a>
