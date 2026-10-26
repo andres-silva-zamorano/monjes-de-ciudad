@@ -29,6 +29,7 @@ jobs:
           cp -a biblioteca site/biblioteca
           cp -a bitacora site/bitacora
           cp -a recursos site/recursos
+          cp -a cruz-de-buda site/cruz-de-buda
       - name: Subir artefacto
         uses: actions/upload-pages-artifact@v3
         with:

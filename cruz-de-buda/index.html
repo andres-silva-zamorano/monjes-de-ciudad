@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Cruz de Buda — Monjes de Ciudad</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"],
+            serif: ["Playfair Display", "serif"],
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    summary { list-style: none; }
+    summary::-webkit-details-marker { display: none; }
+  </style>
+</head>
+<body class="bg-stone-50 font-sans text-stone-800 antialiased">
+  <header class="relative border-b border-stone-200 bg-stone-50 text-stone-800">
+    <nav class="px-8 py-6 md:px-16">
+      <details class="lg:hidden">
+        <summary class="flex cursor-pointer items-center justify-between gap-6">
+          <a href="../index.html" class="font-serif text-xl tracking-wide" onclick="event.stopPropagation()">Monjes de Ciudad</a>
+          <span class="text-sm tracking-wide">Menú</span>
+        </summary>
+        <div class="mt-6 flex flex-col gap-3 border-t border-stone-200 bg-stone-50 pt-4 text-sm tracking-wide">
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../index.html">Inicio</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../index.html#practica">Práctica</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../practica/">Meditaciones Base</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../biblioteca/">Biblioteca</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../bitacora/">Bitácora</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../recursos/">Recursos</a>
+        </div>
+      </details>
+      <div class="hidden items-center justify-between gap-8 lg:flex">
+        <a href="../index.html" class="shrink-0 font-serif text-xl tracking-wide">Monjes de Ciudad</a>
+        <div class="flex flex-wrap justify-end gap-x-5 gap-y-2 text-sm tracking-wide">
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../index.html">Inicio</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../index.html#practica">Práctica</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../practica/">Meditaciones Base</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../biblioteca/">Biblioteca</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../bitacora/">Bitácora</a>
+          <a class="transition-colors duration-300 hover:text-stone-500" href="../recursos/">Recursos</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="px-8 py-16 md:px-16 md:py-24">
+    <div class="mx-auto max-w-2xl">
+      <h1 class="font-serif text-4xl md:text-5xl">La Cruz de Buda</h1>
+
+      <section class="mt-16">
+        <h2 class="font-serif text-2xl md:text-3xl">Historia y Fundamentos</h2>
+        <p class="mt-6 text-lg leading-relaxed">La Cruz de Buda es una técnica psicoenergética que sintetiza los principios éticos y meditativos expuestos por Gautama Buda con la metodología de ecopsicología desarrollada por el científico Vladimir Antonov. Su objetivo es la transformación cualitativa de la conciencia mediante la purificación, expansión e irradiación sistemática de las emociones del amor cordial y la paz desde el chakra anahata (el corazón espiritual).</p>
+      </section>
+
+      <section class="mt-16">
+        <h2 class="font-serif text-2xl md:text-3xl">Autorización Oficial</h2>
+        <p class="mt-6 text-lg leading-relaxed">Andrés Silva Zamorano, creador de Monjes de Ciudad, cuenta con la autorización directa de los autores originales para la difusión de este material. A continuación, el extracto del poder legal emitido el 25 de junio de 2019:</p>
+        <blockquote class="mt-8 border-l border-stone-300 pl-6 text-lg leading-relaxed text-stone-600">
+          <p>We, the undersigned Vladimir Antonov and Anna Zubkova, hereby authorize Andres Silva Zamorano (Chile) to publish and distribute all our books and video films in all languages. Andres Silva Zamorano is empowered to undertake all necessary acts connected therewith.</p>
+        </blockquote>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
