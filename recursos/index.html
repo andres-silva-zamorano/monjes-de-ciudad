@@ -26,6 +26,8 @@
   <style>
     summary { list-style: none; }
     summary::-webkit-details-marker { display: none; }
+    #visor { border: 0; padding: 0; background: transparent; max-width: min(92vw, 64rem); }
+    #visor::backdrop { background: rgba(28, 25, 23, 0.86); }
   </style>
 </head>
 <body class="bg-stone-50 font-sans text-stone-800 antialiased">
@@ -33,7 +35,7 @@
     <nav class="px-8 py-6 md:px-16">
       <details class="lg:hidden">
         <summary class="flex cursor-pointer items-center justify-between gap-6">
-          <a href="../index.html" class="font-serif text-xl tracking-wide" onclick="event.stopPropagation()">Monjes de Ciudad</a>
+          <a href="../index.html" class="flex items-center gap-3 font-serif text-xl tracking-wide" onclick="event.stopPropagation()"><img src="../images/apple-touch-icon.png" alt="" width="36" height="36" class="h-9 w-9 rounded-full" />Monjes de Ciudad</a>
           <span class="text-sm tracking-wide">Menú</span>
         </summary>
         <div class="mt-6 flex flex-col gap-3 border-t border-stone-200 bg-stone-50 pt-4 text-sm tracking-wide">
@@ -46,7 +48,7 @@
         </div>
       </details>
       <div class="hidden items-center justify-between gap-8 lg:flex">
-        <a href="../index.html" class="shrink-0 font-serif text-xl tracking-wide">Monjes de Ciudad</a>
+        <a href="../index.html" class="flex shrink-0 items-center gap-3 font-serif text-xl tracking-wide"><img src="../images/apple-touch-icon.png" alt="" width="36" height="36" class="h-9 w-9 rounded-full" />Monjes de Ciudad</a>
         <div class="flex flex-wrap justify-end gap-x-5 gap-y-2 text-sm tracking-wide">
           <a class="transition-colors duration-300 hover:text-stone-500" href="../index.html">Inicio</a>
           <a class="transition-colors duration-300 hover:text-stone-500" href="../index.html#practica">Práctica</a>
@@ -59,20 +61,150 @@
     </nav>
   </header>
 
-  <main class="px-8 py-16 md:px-16 md:py-24">
+  <main class="px-8 py-20 md:px-16 md:py-28">
     <div class="mx-auto max-w-2xl">
       <h1 class="font-serif text-4xl md:text-5xl">Recursos</h1>
-      <div class="mt-16 border-t border-stone-200">
-        <details class="border-b border-stone-200 py-5">
-          <summary class="cursor-pointer font-serif text-2xl">Frecuencias Solfeggio</summary>
-          <p class="mt-4 leading-relaxed text-stone-600">El material va aquí.</p>
-        </details>
-        <details class="border-b border-stone-200 py-5">
-          <summary class="cursor-pointer font-serif text-2xl">Imágenes de apoyo</summary>
-          <p class="mt-4 leading-relaxed text-stone-600">El material va aquí.</p>
-        </details>
+      <p class="mt-8 text-lg leading-relaxed">Sonidos para la práctica e imágenes de naturaleza sátvica. Lo primero se escucha. Lo segundo se mira, despacio.</p>
+
+      <section class="mt-20 border-t border-stone-200 pt-16">
+        <h2 class="font-serif text-3xl">Mantras bija</h2>
+        <p class="mt-6 leading-relaxed text-stone-600">Siete sílabas semilla, grabadas en repetición. Puedes dejarlas sonar mientras practicas, o escucharlas en silencio.</p>
+        <div class="mt-10 border-t border-stone-200">
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">AAM</h3>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/aam.mp3"></audio>
+          </article>
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">VOM</h3>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/vom.mp3"></audio>
+          </article>
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">HAM</h3>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/ham.mp3"></audio>
+          </article>
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">YAM</h3>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/yam.mp3"></audio>
+          </article>
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">RAM</h3>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/ram.mp3"></audio>
+          </article>
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">VAM</h3>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/vam.mp3"></audio>
+          </article>
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">LAM</h3>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/lam.mp3"></audio>
+          </article>
+        </div>
+      </section>
+
+      <section class="mt-20">
+        <h2 class="font-serif text-3xl">Otros sonidos</h2>
+        <p class="mt-6 leading-relaxed text-stone-600">Dos piezas para acompañar un momento de quietud.</p>
+        <div class="mt-10 border-t border-stone-200">
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">Mañana de primavera</h3>
+            <p class="mt-3 text-stone-600">Un paisaje sonoro para entrar en calma.</p>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/manana-de-primavera.mp3"></audio>
+          </article>
+          <article class="border-b border-stone-200 py-8">
+            <h3 class="font-serif text-2xl">Aspiración</h3>
+            <p class="mt-3 text-stone-600">Una pieza breve para quedarse en silencio.</p>
+            <audio class="mt-4 w-full" controls preload="none" src="sonidos/aspiracion.mp3"></audio>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section class="mx-auto mt-24 max-w-6xl">
+      <div class="max-w-2xl">
+        <h2 class="font-serif text-3xl">Naturaleza sátvica</h2>
+        <p class="mt-6 leading-relaxed text-stone-600">Fotografías para detener la mirada. Bosques, lagos, montañas, niebla y el mar.</p>
+      </div>
+      <div class="mt-12 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <button type="button" class="group text-left" data-foto="fotos/_dsc0091.jpg" data-titulo="Luz entre los árboles"><img class="aspect-[4/3] w-full object-cover" src="fotos/_dsc0091.jpg" alt="Luz entre los árboles" /><span class="mt-3 block text-sm text-stone-500">Luz entre los árboles</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/dawn-5.jpg" data-titulo="El sol sobre el lago"><img class="aspect-[4/3] w-full object-cover" src="fotos/dawn-5.jpg" alt="El sol sobre el lago" /><span class="mt-3 block text-sm text-stone-500">El sol sobre el lago</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/dawn-4.jpg" data-titulo="Amanecer entre pinos"><img class="aspect-[4/3] w-full object-cover" src="fotos/dawn-4.jpg" alt="Amanecer entre pinos" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Amanecer entre pinos</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/dsc_0007.jpg" data-titulo="El sol en el horizonte"><img class="aspect-[4/3] w-full object-cover" src="fotos/dsc_0007.jpg" alt="El sol en el horizonte" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El sol en el horizonte</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/_dsc0290.jpg" data-titulo="El lago al amanecer"><img class="aspect-[4/3] w-full object-cover" src="fotos/_dsc0290.jpg" alt="El lago al amanecer" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El lago al amanecer</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/p1020196.jpg" data-titulo="Atardecer en el agua"><img class="aspect-[4/3] w-full object-cover" src="fotos/p1020196.jpg" alt="Atardecer en el agua" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Atardecer en el agua</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/night-in-mountains.jpg" data-titulo="Luz en las montañas"><img class="aspect-[4/3] w-full object-cover" src="fotos/night-in-mountains.jpg" alt="Luz en las montañas" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Luz en las montañas</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/moon2.jpg" data-titulo="El crepúsculo"><img class="aspect-[4/3] w-full object-cover" src="fotos/moon2.jpg" alt="El crepúsculo" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El crepúsculo</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/moonlight.jpg" data-titulo="La luna"><img class="aspect-[4/3] w-full object-cover" src="fotos/moonlight.jpg" alt="La luna" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">La luna</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/lake-o2.jpg" data-titulo="Niebla en el lago"><img class="aspect-[4/3] w-full object-cover" src="fotos/lake-o2.jpg" alt="Niebla en el lago" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Niebla en el lago</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mist-5.jpg" data-titulo="El lago en calma"><img class="aspect-[4/3] w-full object-cover" src="fotos/mist-5.jpg" alt="El lago en calma" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El lago en calma</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mist-6.jpg" data-titulo="Amanecer con niebla"><img class="aspect-[4/3] w-full object-cover" src="fotos/mist-6.jpg" alt="Amanecer con niebla" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Amanecer con niebla</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mist2.jpg" data-titulo="Niebla al amanecer"><img class="aspect-[4/3] w-full object-cover" src="fotos/mist2.jpg" alt="Niebla al amanecer" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Niebla al amanecer</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mist_in_forest.jpg" data-titulo="Un pino en la niebla"><img class="aspect-[4/3] w-full object-cover" src="fotos/mist_in_forest.jpg" alt="Un pino en la niebla" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Un pino en la niebla</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mist_in_forest2.jpg" data-titulo="El bosque entre la niebla"><img class="aspect-[4/3] w-full object-cover" src="fotos/mist_in_forest2.jpg" alt="El bosque entre la niebla" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El bosque entre la niebla</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mist_over_lake-12.jpg" data-titulo="La niebla se levanta"><img class="aspect-[4/3] w-full object-cover" src="fotos/mist_over_lake-12.jpg" alt="La niebla se levanta" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">La niebla se levanta</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/_dsc0109.jpg" data-titulo="El lago y el cielo"><img class="aspect-[4/3] w-full object-cover" src="fotos/_dsc0109.jpg" alt="El lago y el cielo" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El lago y el cielo</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/_dsc0150.jpg" data-titulo="Pinos junto al agua"><img class="aspect-[4/3] w-full object-cover" src="fotos/_dsc0150.jpg" alt="Pinos junto al agua" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Pinos junto al agua</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/at_lake-3.jpg" data-titulo="La orilla del lago"><img class="aspect-[4/3] w-full object-cover" src="fotos/at_lake-3.jpg" alt="La orilla del lago" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">La orilla del lago</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/morning_at_lake-16.jpg" data-titulo="Mañana en el lago"><img class="aspect-[4/3] w-full object-cover" src="fotos/morning_at_lake-16.jpg" alt="Mañana en el lago" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Mañana en el lago</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/dsc_0119.jpg" data-titulo="Sombra junto al agua"><img class="aspect-[4/3] w-full object-cover" src="fotos/dsc_0119.jpg" alt="Sombra junto al agua" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Sombra junto al agua</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/dsc_0208.jpg" data-titulo="Otoño en el lago"><img class="aspect-[4/3] w-full object-cover" src="fotos/dsc_0208.jpg" alt="Otoño en el lago" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Otoño en el lago</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/dsc_0218.jpg" data-titulo="El bosque de abedules"><img class="aspect-[4/3] w-full object-cover" src="fotos/dsc_0218.jpg" alt="El bosque de abedules" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El bosque de abedules</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/dsc_0227.jpg" data-titulo="El sendero del bosque"><img class="aspect-[4/3] w-full object-cover" src="fotos/dsc_0227.jpg" alt="El sendero del bosque" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El sendero del bosque</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mountains.jpg" data-titulo="El lago y las montañas"><img class="aspect-[4/3] w-full object-cover" src="fotos/mountains.jpg" alt="El lago y las montañas" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El lago y las montañas</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mountains-3.jpg" data-titulo="Valle entre montañas"><img class="aspect-[4/3] w-full object-cover" src="fotos/mountains-3.jpg" alt="Valle entre montañas" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Valle entre montañas</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mountains-5.jpg" data-titulo="Un pino en la ladera"><img class="aspect-[4/3] w-full object-cover" src="fotos/mountains-5.jpg" alt="Un pino en la ladera" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Un pino en la ladera</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/mountains-6.jpg" data-titulo="Colinas al amanecer"><img class="aspect-[4/3] w-full object-cover" src="fotos/mountains-6.jpg" alt="Colinas al amanecer" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Colinas al amanecer</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/silence-of-mountains2.jpg" data-titulo="Silencio de las montañas"><img class="aspect-[4/3] w-full object-cover" src="fotos/silence-of-mountains2.jpg" alt="Silencio de las montañas" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Silencio de las montañas</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/sea-and-bird.jpg" data-titulo="El mar y un ave"><img class="aspect-[4/3] w-full object-cover" src="fotos/sea-and-bird.jpg" alt="El mar y un ave" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">El mar y un ave</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/wave10.jpg" data-titulo="La ola"><img class="aspect-[4/3] w-full object-cover" src="fotos/wave10.jpg" alt="La ola" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">La ola</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/wave2.jpg" data-titulo="Dentro de la ola"><img class="aspect-[4/3] w-full object-cover" src="fotos/wave2.jpg" alt="Dentro de la ola" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Dentro de la ola</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/wave9.jpg" data-titulo="Agua verde"><img class="aspect-[4/3] w-full object-cover" src="fotos/wave9.jpg" alt="Agua verde" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">Agua verde</span></button>
+        <button type="button" class="group text-left" data-foto="fotos/sivash.jpg" data-titulo="La estepa"><img class="aspect-[4/3] w-full object-cover" src="fotos/sivash.jpg" alt="La estepa" loading="lazy" /><span class="mt-3 block text-sm text-stone-500">La estepa</span></button>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="visor">
+    <div class="bg-stone-50">
+      <img id="visor-img" class="max-h-[78vh] w-full bg-stone-900 object-contain" alt="" />
+      <div class="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+        <p id="visor-titulo" class="font-serif text-lg"></p>
+        <div class="flex items-center gap-5 text-sm tracking-wide">
+          <button type="button" id="visor-anterior" class="text-stone-500 transition-colors duration-300 hover:text-stone-800">Anterior</button>
+          <button type="button" id="visor-siguiente" class="text-stone-500 transition-colors duration-300 hover:text-stone-800">Siguiente</button>
+          <form method="dialog"><button class="text-stone-800">Cerrar</button></form>
+        </div>
       </div>
     </div>
-  </main>
+  </dialog>
+  <script>
+    const visor = document.getElementById("visor");
+    const visorImg = document.getElementById("visor-img");
+    const visorTitulo = document.getElementById("visor-titulo");
+    const fotos = [...document.querySelectorAll("[data-foto]")];
+    let actual = 0;
+
+    function mostrar(indice) {
+      actual = (indice + fotos.length) % fotos.length;
+      const foto = fotos[actual];
+      visorImg.src = foto.dataset.foto;
+      visorImg.alt = foto.dataset.titulo;
+      visorTitulo.textContent = foto.dataset.titulo;
+      if (!visor.open) visor.showModal();
+    }
+
+    fotos.forEach((foto, indice) => {
+      foto.addEventListener("click", () => mostrar(indice));
+    });
+    document.getElementById("visor-anterior").addEventListener("click", () => mostrar(actual - 1));
+    document.getElementById("visor-siguiente").addEventListener("click", () => mostrar(actual + 1));
+    visor.addEventListener("click", (evento) => {
+      if (evento.target === visor) visor.close();
+    });
+    document.addEventListener("keydown", (evento) => {
+      if (!visor.open) return;
+      if (evento.key === "ArrowLeft") mostrar(actual - 1);
+      if (evento.key === "ArrowRight") mostrar(actual + 1);
+    });
+  </script>
 </body>
 </html>
