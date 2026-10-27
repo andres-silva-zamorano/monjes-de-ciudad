@@ -24,6 +24,7 @@ jobs:
         run: |
           mkdir -p site
           cp index.html site/index.html
+          cp sitemap.xml site/sitemap.xml
           cp -a images site/images
           cp images/favicon.ico site/favicon.ico
           cp -a practica site/practica
